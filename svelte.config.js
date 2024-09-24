@@ -17,7 +17,7 @@ const config = {
 			onError: 'continue'
 		},
 		paths: {
-			base: production ? '/robo-scrolly' : ''
+			base: production ? '/scroller-template' : ''
 		},
 		trailingSlash: 'always'
 	}

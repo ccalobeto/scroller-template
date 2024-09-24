@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { csvParse } from "d3-dsv";
 import { MagicArray, renderJSON, autoType } from "@onsvisual/robo-utils";
 import rosae from "rosaenlg";
@@ -6,20 +6,20 @@ import { parse } from "node-html-parser";
 import { geo_types, cols, source_dir, data_file, template_file, files_to_copy } from "./build-data.config.js";
 
 // Load data CSV
-let data_raw = readFileSync(source_dir + data_file, {encoding:'utf8', flag:'r'});
+let data_raw = readFileSync(source_dir + data_file, { encoding: 'utf8', flag: 'r' });
 let data = new MagicArray(...csvParse(data_raw, autoType));
 
 // Create the output directories (if they don't exist)
 let dir = "./static/data/json";
-if (!existsSync(dir)){
+if (!existsSync(dir)) {
     mkdirSync(dir, { recursive: true });
 }
 
 // Load PUG file
-let template = readFileSync(source_dir + template_file, {encoding:'utf8', flag:'r'});
+let template = readFileSync(source_dir + template_file, { encoding: 'utf8', flag: 'r' });
 
 // Process data file into array of LAs and keyed lookup of all geographies
-let places = data.filter(d => geo_types.includes(d.areacd.slice(0,3)));
+let places = data.filter(d => geo_types.includes(d.areacd.slice(0, 3)));
 let lookup = {};
 data.forEach(d => lookup[d.areacd] = d);
 
