@@ -11,15 +11,9 @@ const config = {
 			pages: 'build',
 			assets: 'build'
 		}),
-		prerender: {
-			enabled: production,
-			entries: ['/', '/embed/'],
-			onError: 'continue'
-		},
 		paths: {
 			base: production ? '/scroller-template' : ''
-		},
-		trailingSlash: 'always'
+		}
 	}
 };
 
