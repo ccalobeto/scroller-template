@@ -1,20 +1,13 @@
-/** @type {import('@sveltejs/kit').Config} */
 import adapter from '@sveltejs/adapter-static';
 
-const production = process.env.NODE_ENV === 'production';
-
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		adapter: adapter({
-			// Options below are defaults
-			pages: 'build',
-			assets: 'build'
-		}),
+		adapter: adapter({ fallback: '404.html' }),
 		paths: {
-			base: production ? '/scroller-template' : ''
-		}
-	}
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
+		},
+	},
 };
 
 export default config;
