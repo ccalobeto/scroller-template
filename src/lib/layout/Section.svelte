@@ -5,7 +5,7 @@
 	export let theme = getContext('theme');
 	export let id = null;
 
-  let colors = theme ? themes[theme] : {};
+	let colors = theme ? themes[theme] : {};
 </script>
 
 <section {id} style:--text={colors.text} style:--background={colors.background}>
@@ -17,7 +17,7 @@
 <style>
 	section {
 		margin-bottom: 40px;
-    color: var(--text, #222);
-    background-color: var(--background, #fff);
+		color: var(--text, #222);
+		background-color: var(--background, #fff);
 	}
 </style>

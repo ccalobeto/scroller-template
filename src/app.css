@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -18,8 +19,8 @@ body {
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
-	font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+	box-sizing: border-box;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
 	font-size: 21px;
 	line-height: 1.5;
 	word-wrap: break-word;
@@ -39,14 +40,17 @@ label {
 	display: block;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
 	font-family: inherit;
 	font-size: inherit;
 	-webkit-padding: 0.4em 0;
 	padding: 0.4em;
 	margin: 0 0 0.5em 0;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 2px;
 }
@@ -73,13 +77,18 @@ button:focus {
 	border-color: #666;
 }
 
-header, section, nav, footer, figure, caption {
+header,
+section,
+nav,
+footer,
+figure,
+caption {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -170,11 +179,11 @@ small {
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .caption {
@@ -234,7 +243,7 @@ header .text-big {
 
 .em {
 	padding: 1px 4px 1px 4px;
-/*	border-radius: 5px; */
+	/*	border-radius: 5px; */
 	font-weight: bold;
 	white-space: nowrap;
 }
@@ -250,30 +259,30 @@ svelte-scroller-background-container {
 	pointer-events: all !important;
 }
 
-[slot="foreground"] section {
+[slot='foreground'] section {
 	padding: 100vh 0 100vh 0;
 }
 
-[slot="foreground"] section + section {
+[slot='foreground'] section + section {
 	padding: 0 0 100vh 0;
 }
 
-[slot="foreground"] section > div {
+[slot='foreground'] section > div {
 	padding: 12px;
 	position: relative;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
-[slot="foreground"] section div p {
+[slot='foreground'] section div p {
 	margin: 0;
 }
 
-[slot="foreground"] section div p + p {
+[slot='foreground'] section div p + p {
 	margin-top: 30px;
 }
 
-[slot="foreground"] section div h2,
-[slot="foreground"] section div h3 {
+[slot='foreground'] section div h2,
+[slot='foreground'] section div h3 {
 	margin: 10px 0 20px 0;
 }
 
@@ -283,18 +292,18 @@ svelte-scroller-background-container {
 		min-width: 65%;
 		margin: 0 0 0 auto;
 	}
-	.splitscreen [slot="foreground"] section div::before {
+	.splitscreen [slot='foreground'] section div::before {
 		opacity: 0;
 	}
-	.splitscreen [slot="foreground"] section {
+	.splitscreen [slot='foreground'] section {
 		width: 480px;
 		max-width: 35%;
 		margin: 0 auto 0 0;
 		background-color: #fff;
 	}
-	.splitscreen [slot="foreground"] .col-medium {
+	.splitscreen [slot='foreground'] .col-medium {
 		width: 100%;
-		margin: 0;	
+		margin: 0;
 		padding: 0 30px;
 	}
 }
@@ -306,6 +315,6 @@ svelte-scroller-background-container {
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
-	clip: rect(0,0,0,0);
+	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
